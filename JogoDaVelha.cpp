@@ -58,25 +58,25 @@ void montarTabuleiro() {
 bool verificarVitoria() {
     for (int l = 0; l < 3; l++) {
         if (tabuleiro[l][0] == tabuleiro[l][1] && tabuleiro[l][1] == tabuleiro[l][2] && tabuleiro[l][0] != ' ') {
-            printf("\nVit�ria do jogador %c na linha %d\n", tabuleiro[l][0], l);
+            printf("\nVitória do jogador %c na linha %d\n", tabuleiro[l][0], l);
             return true;
         }
     }
 
     for (int c = 0; c < 3; c++) {
         if (tabuleiro[0][c] == tabuleiro[1][c] && tabuleiro[1][c] == tabuleiro[2][c] && tabuleiro[0][c] != ' ') {
-            printf("\nVit�ria do jogador %c na coluna %d\n", tabuleiro[0][c], c);
+            printf("\nVitória do jogador %c na coluna %d\n", tabuleiro[0][c], c);
             return true;
         }
     }
 
     if (tabuleiro[0][0] == tabuleiro[1][1] && tabuleiro[1][1] == tabuleiro[2][2] && tabuleiro[0][0] != ' ') {
-        printf("\nVit�ria do jogador %c na diagonal principal\n", tabuleiro[0][0]);
+        printf("\nVitória do jogador %c na diagonal principal\n", tabuleiro[0][0]);
         return true;
     }
 
     if (tabuleiro[0][2] == tabuleiro[1][1] && tabuleiro[1][1] == tabuleiro[2][0] && tabuleiro[0][2] != ' ') {
-        printf("\nVit�ria do jogador %c na diagonal secund�ria\n", tabuleiro[0][2]);
+        printf("\nVitória do jogador %c na diagonal secundï¿½ria\n", tabuleiro[0][2]);
         return true;
     }
 
@@ -96,7 +96,7 @@ void jogarDeNovo() {
 
 void entrada() {
     while (numJogadas < 9) {
-        printf("\nFa�a sua jogada: ");
+        printf("\nFaça sua jogada: ");
         scanf(" %c", &jogada);
 
         for (int l = 0; l < 3; l++) {
@@ -115,9 +115,9 @@ void entrada() {
         montarTabuleiro();
 					
         if(numJogadas % 2 == 1) 
-		    	printf("\nVez do O");
-				else
-					printf("\nVez do X");
+	  printf("\nVez do O");
+	else
+	  printf("\nVez do X");
 
         if (verificarVitoria()) {
             jogarDeNovo();
@@ -129,7 +129,7 @@ void entrada() {
 }
 
 int main() {
-	setlocale(LC_ALL, "Portuguese");
+  setlocale(LC_ALL, "Portuguese");
   SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), COR_PADRAO);
   inicializaTabuleiro();
   montarTabuleiro();
